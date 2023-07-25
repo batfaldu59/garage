@@ -2,8 +2,10 @@
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        UsineDAssemblageVoiture ua = new UsineDAssemblageVoiture();
-        Voiture v = ua.assembler();
+        Bateau bateau = new Bateau();
+        bateau.masse = 60;
+        Port port = new Port();
+        port.accueillirEngin(bateau);
 
     }
 }

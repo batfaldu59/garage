@@ -1,6 +1,6 @@
 import java.sql.SQLOutput;
 
-public class Voiture extends VehiculeAMoteur{
+public class Voiture extends VehiculeAMoteur implements Vidangable{
     static int nbRoues = 4;
     int nbPortes = 5;
     boolean automatique;
@@ -66,4 +66,8 @@ public class Voiture extends VehiculeAMoteur{
     }
 
 
+    @Override
+    public void vidanger() {
+        System.out.println("Déboucher le bouchon sous la place du passager et attendre que ca coule");
+    }
 }
