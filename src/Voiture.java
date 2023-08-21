@@ -1,6 +1,6 @@
 import java.sql.SQLOutput;
 
-public class Voiture extends VehiculeAMoteur implements Vidangable{
+public class Voiture extends Vehicule implements Vidangable{
     static int nbRoues = 4;
     int nbPortes = 5;
     boolean automatique;
@@ -8,17 +8,15 @@ public class Voiture extends VehiculeAMoteur implements Vidangable{
     int rapportCourant;
 
     Voiture() {
-        super(new Moteur());
+
     }
 
     Voiture(String couleur) {
-        this();
         this.couleur = couleur;
         System.out.println("Une voiture est construite avec une couleur");
     }
 
     Voiture(int nbPortes) {
-        this();
         this.nbPortes = nbPortes;
         System.out.println("Une voiture est construite avec un nombre de portes");
     }
@@ -32,7 +30,6 @@ public class Voiture extends VehiculeAMoteur implements Vidangable{
         Moteur moteur = new Moteur();
         moteur.carburation = carburation;
         moteur.nbCylindres = nbCylindre;
-        this.moteur = moteur;
     }
 
     static void klaxoner() {
@@ -69,5 +66,10 @@ public class Voiture extends VehiculeAMoteur implements Vidangable{
     @Override
     public void vidanger() {
         System.out.println("Déboucher le bouchon sous la place du passager et attendre que ca coule");
+    }
+
+    @Override
+    void klaxonner() {
+        System.out.println("tututttttt");
     }
 }
